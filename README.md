@@ -35,5 +35,3 @@ int main()
 
 The output when I run this code:
 nop
-
-
