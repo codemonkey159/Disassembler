@@ -26,26 +26,18 @@ adr will be the address of the pointer provided to disassemble().
 A minimal example of the libraries usage would be something like this:
 
 
-#include "assembler.cpp"
+	#include "assembler.cpp"
+	#include <iostream>
+	
+	using namespace std;
 
-#include <iostream>
-
-using namespace std;
-
-
-int main()
-
-{
-
-	unsigned char byte = 0x90;
-
-	INSTRUCTION ins = disassemble(&byte);
-
-	cout << ins.disasmstr;
-
-	return 0;
-
-}
+	int main()
+	{
+		unsigned char byte = 0x90;
+		INSTRUCTION ins = disassemble(&byte);
+		cout << ins.disasmstr;
+		return 0;
+	}
 
 
 The output when I run this code:
